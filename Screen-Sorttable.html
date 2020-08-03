@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.5.0-dist/estilo.css">
+
+    <style>
+        h1 {
+            color: #ffffff;
+            border: 0px solid #f00;
+            padding: 80px;
+        }
+
+        td {
+            color: #ffffff;
+        }
+    </style>
+    <script src="sorttable/sorttable.js"></script>
+</head>
+
+<body>
+
+    <h1 align=center>Tabela</h1>
+
+    <script>
+        function adiciona() {
+            var tbl = document.getElementById("tabela")
+            var row = tbl.insertRow()
+            var name = row.insertCell()
+            var age = row.insertCell()
+            name.innerHTML = document.getElementById('name').value;
+            age.innerHTML = document.getElementById('age').value;
+        }
+
+    </script>
+    <table align=center>
+        <td> <strong>Nome</strong> </td>
+        <td> <strong>Idade</strong> </td>
+        <tr>
+            <td> <input type="text" name="Nome" id="name"> </td>
+            <td> <input type="text" name="Idade" id="age"> </td>
+            <td> <input type='button' id='save' class="btn float-right login_btn" value='Salvar' onclick='adiciona()' />
+            </td>
+        </tr>
+    </table>
+    <br>
+    </br>
+
+    <table id='tabela' align=center border=1 style="width:20%" class="sortable">
+        <tr>
+            <td><strong>Nome</strong></td>
+            <td><strong>Idade</strong></td>
+        </tr>
+    </table>
+
+
+
+</body>
+
+</html>
